@@ -4,6 +4,7 @@ from aiohttp.http_exceptions import BadStatusLine
 from info import *
 from web.server import multi_clients, work_loads, StreamBot
 from web.server.exceptions import FIleNotFound, InvalidHash
+from database.users_db import db
 from web.utils.custom_dl import ByteStreamer
 from utils import get_readable_time
 from web.utils import StartTime, __version__
@@ -39,6 +40,16 @@ async def stream_watch_handler(request: web.Request):
         else:
             id = int(re.search(r"(\d+)(?:\/\S+)?", path).group(1))
             secure_hash = request.rel_url.query.get("hash")
+
+        # 🕒 Link Expiry Check
+        expiry_seconds = await db.get_link_expiry()
+        if expiry_seconds > 0:
+            file_record = await db.files.find_one({"file_id": id})
+            if file_record:
+                created_at = file_record.get("timestamp", 0)
+                if time.time() - created_at > expiry_seconds:
+                    return web.Response(status=410, text="🚫 This link has expired.\nPlease request a new link from the bot.")
+
         return web.Response(
             text=await render_page(id, secure_hash), content_type="text/html"
         )
@@ -63,6 +74,16 @@ async def stream_handler(request: web.Request):
         else:
             id = int(re.search(r"(\d+)(?:\/\S+)?", path).group(1))
             secure_hash = request.rel_url.query.get("hash")
+
+        # 🕒 Link Expiry Check
+        expiry_seconds = await db.get_link_expiry()
+        if expiry_seconds > 0:
+            file_record = await db.files.find_one({"file_id": id})
+            if file_record:
+                created_at = file_record.get("timestamp", 0)
+                if time.time() - created_at > expiry_seconds:
+                    return web.Response(status=410, text="🚫 This link has expired.\nPlease request a new link from the bot.")
+
         return await media_streamer(request, id, secure_hash)
     except InvalidHash as e:
         raise web.HTTPForbidden(text=e.message)

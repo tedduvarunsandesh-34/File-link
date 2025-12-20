@@ -65,7 +65,7 @@ MAX_FILES = int(environ.get("MAX_FILES", 50))
 VERIFY_EXPIRE = int(environ.get('VERIFY_EXPIRE', 60))  # Hours
 
 # ⚙️ __Worker & App Config__
-WORKERS = int(environ.get('WORKERS', 4))
+WORKERS = int(environ.get('WORKERS', 10))
 MULTI_CLIENT = False
 NAME = environ.get('name', 'rexbots_official')
 

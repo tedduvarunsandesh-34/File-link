@@ -373,3 +373,24 @@ async def help(client, message):
         disable_web_page_preview=True, 
         reply_markup=reply_markup
 )
+
+@Client.on_message(filters.command("set_expiry") & filters.user(ADMINS))
+async def set_expiry_command(client, message):
+    if len(message.command) < 2:
+        return await message.reply_text("Usage: `/set_expiry <minutes>`\nExample: `/set_expiry 10` for 10 minutes.\nUse `0` to disable expiry.")
+    
+    try:
+        minutes = int(message.command[1])
+        if minutes < 0:
+            return await message.reply_text("❌ Time must be a positive integer.")
+        
+        seconds = minutes * 60
+        await db.set_link_expiry(seconds)
+        
+        if seconds == 0:
+            await message.reply_text("✅ **Link Expiry Disabled.** Links will never expire.")
+        else:
+            await message.reply_text(f"✅ **Link Expiry Set to {minutes} minutes.**\nLinks generated from now on will expire after {minutes} minutes.")
+            
+    except ValueError:
+        await message.reply_text("❌ Invalid number format.")

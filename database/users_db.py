@@ -205,4 +205,17 @@ class Database:
             {"id": user_id}, {"$set": {"expiry_time": None}}
         )
 
+    # ⚙️ SETTINGS SYSTEM ---------------------------
+    async def get_link_expiry(self):
+        # Default to 0 (No Expiry) if not set
+        setting = await mydb.settings.find_one({"name": "link_expiry"})
+        return setting["value"] if setting else 0
+
+    async def set_link_expiry(self, seconds: int):
+        await mydb.settings.update_one(
+            {"name": "link_expiry"},
+            {"$set": {"value": seconds}},
+            upsert=True
+        )
+
 db = Database()
