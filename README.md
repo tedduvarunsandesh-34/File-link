@@ -9,7 +9,7 @@ Features a beautiful web interface, premium video player, and robust admin contr
 <a href="https://t.me/RexBots_Official">
   <img src="https://img.shields.io/badge/Join-Telegram%20Channel-blue.svg?style=for-the-badge&logo=telegram" alt="Join Telegram">
 </a>
-<a href="https://github.com/Botsthe/FILE-TO-LINK-BOT">
+<a href="https://github.com/abhinai2244/FILE-TO-LINK-BOT.git">
   <img src="https://img.shields.io/badge/Repo-GitHub-black.svg?style=for-the-badge&logo=github" alt="GitHub Repo">
 </a>
 
