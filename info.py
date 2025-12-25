@@ -14,10 +14,10 @@ OWNER_USERNAME = environ.get("OWNER_USERNAME", 'ind_gamer_1')
 BOT_USERNAME = environ.get("BOT_USERNAME", 'File_to_link_Go_bot')
 
 # 🔗 Channel & Support Links
-CHANNEL = environ.get('CHANNEL', 'https://t.me/RexBots_Official')
-SUPPORT = environ.get('SUPPORT', 'https://t.me/RexBots_Official')
-HOW_TO_VERIFY = environ.get('HOW_TO_VERIFY', 'https://t.me/RexBots_Official')
-HOW_TO_OPEN = environ.get('HOW_TO_OPEN', 'https://t.me/RexBots_Official')
+CHANNEL = environ.get('CHANNEL', 'https://t.me/All_Animes_in_teluguu_vs')
+SUPPORT = environ.get('SUPPORT', 'https://t.me/All_Animes_in_teluguu_vs')
+HOW_TO_VERIFY = environ.get('HOW_TO_VERIFY', 'https://t.me/All_Animes_in_teluguu_vs')
+HOW_TO_OPEN = environ.get('HOW_TO_OPEN', 'https://t.me/All_Animes_in_teluguu_vs')
 
 # 📢 Log Channels
 BIN_CHANNEL = int(environ.get("BIN_CHANNEL", '-1002599753693'))
