@@ -105,17 +105,21 @@ class script(object):
         "</b>"
     )
 
-    CAPTION_TXT = (
-    "<b><u>YOUR LINK GENERATED!</u></b>\n\n"
-    "<b>"
-    "➠📧 FILE NAME : <code>{}</code>\n\n"
-    "➠📦 FILE SIZE : {}\n\n"
-    "<u>TAP TO COPY LINK 👇</u>\n\n"
-    "➠🖥 STREAM : <code>{}</code>\n\n"
-    "➠📥 DOWNLOAD : <code>{}</code>\n\n"
-    "➠🚸 ANY ISSUES DM :➠@ind_gamer_1"
-    "</b>"
-    )
+    CAPTION_TXT = """
+<i><u>𝗬𝗼𝘂𝗿 𝗟𝗶𝗻𝗸 𝗚𝗲𝗻𝗲𝗿𝗮𝘁𝗲𝗱 !</u></i>
+
+<b>📧 ꜰɪʟᴇ ɴᴀᴍᴇ :- </b> <i><a href={}>{}</a></i>
+
+<b>📦 ꜰɪʟᴇ sɪᴢᴇ :- </b> <i>{}</i>
+
+<b><u><i>Tap To Copy Link 👇</u></i></b>
+
+<b>🖥 Stream  : </b> <code>{}</code>
+
+<b>📥 Download : </b> <code>{}</code>
+
+<b>🚸 Nᴏᴛᴇ : LINK WON'T EXPIRE TILL I DELETE </b>"""
+    
     VERIFICATION_TEXT = (
         "<b>HEY {},\n\n"
         "<u>YOU ARE NOT VERIFIED TODAY.\n"
