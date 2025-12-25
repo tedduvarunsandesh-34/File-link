@@ -106,16 +106,16 @@ class script(object):
     )
 
     CAPTION_TXT = (
-        "<b>{file_name}</b>\n\n"
-        "Size : <b>{file_size}</b>\n"
-        "Year : <b>{year}</b>\n"
-        "Quality : <b>{quality}</b>\n"
-        "Language : <b>{language}</b>\n\n"
-        "➠ Stream Link : <a href='{stream_link}'>Click Here</a>\n\n"
-        "➠ Download Link : <a href='{download_link}'>Click Here</a>\n\n"
-        "➠ Telegram File : <a href='{telegram_file}'>Click Here</a>"
+    "<b><u>YOUR LINK GENERATED!</u></b>\n\n"
+    "<b>"
+    "➠📧 FILE NAME : <code>{}</code>\n\n"
+    "➠📦 FILE SIZE : {}\n\n"
+    "<u>TAP TO COPY LINK 👇</u>\n\n"
+    "➠🖥 STREAM : <code>{}</code>\n\n"
+    "➠📥 DOWNLOAD : <code>{}</code>\n\n"
+    "➠🚸 ANY ISSUES DM :➠@ind_gamer_1"
+    "</b>"
     )
-
     VERIFICATION_TEXT = (
         "<b>HEY {},\n\n"
         "<u>YOU ARE NOT VERIFIED TODAY.\n"
