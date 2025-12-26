@@ -349,7 +349,7 @@ async def delete_files_list(client, message):
 @Client.on_message(filters.command("about"))
 async def about(client, message):
     buttons = [[
-       InlineKeyboardButton('💻', url='https://t.me/RexBots_Official')
+       InlineKeyboardButton('💻', url='https://t.me/ind_gamer_1')
     ],[
        InlineKeyboardButton('• ᴄʟᴏsᴇ •', callback_data='close_data')
     ]]
