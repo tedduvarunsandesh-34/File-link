@@ -6,7 +6,7 @@ from info import URL, BOT_USERNAME, BIN_CHANNEL, CHANNEL, PROTECT_CONTENT, FSUB,
 from database.users_db import db
 from web.utils.file_properties import get_hash
 from utils import get_size
-from plugins.rexbots import rx_verification, is_user_allowed, is_user_joined
+from plugins.govarx import rx_verification, is_user_allowed, is_user_joined
 from Script import script
 
 import urllib.parse
@@ -47,7 +47,7 @@ async def private_receive_handler(c: Client, m: Message):
     try:
         forwarded = await m.forward(chat_id=BIN_CHANNEL)
         hash_str = get_hash(forwarded)
-        stream = f"{URL}watch/{forwarded.id}/RexBots_{int(time.time())}.mkv?hash={hash_str}"
+        stream = f"{URL}watch/{forwarded.id}/Govarx_{int(time.time())}.mkv?hash={hash_str}"
         download = f"{URL}{forwarded.id}?hash={hash_str}"
         file_link = f"https://t.me/{BOT_USERNAME}?start=file_{forwarded.id}"
         share_link = f"https://t.me/share/url?url={urllib.parse.quote(file_link)}"
