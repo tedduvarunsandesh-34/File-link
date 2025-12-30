@@ -1,12 +1,12 @@
 class rexbots_template(object):
-    NAME = "RexBots Official"
+    NAME = "Govar x"
 
     DISCLAIMER = (
         "This platform provides high-speed streaming and download services. "
         "Strictly for personal use. Report any copyright infringements or inappropriate content to our support team."
     )
 
-    REPORT_LINK = "https://t.me/RexBots_Official"
+    REPORT_LINK = "https://t.me/ind_gamer_1"
 
     # Premium Color Palette (Dark Theme)
     COLOURS = {
