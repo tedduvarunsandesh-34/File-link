@@ -5,7 +5,7 @@ from Script import script
 SESSION = environ.get('SESSION', 'Govar x')  # Session name
 API_ID = int(environ.get('API_ID', '28408609'))
 API_HASH = environ.get('API_HASH', 'd6ddeafb0c189d91b8197ad49103e806')
-BOT_TOKEN = environ.get('BOT_TOKEN', '8560596492:AAGl745Wqaz5EPDmLyWfsNow1-g0bRzmOBE')
+BOT_TOKEN = environ.get('BOT_TOKEN', '8560596492:AAHhiDvM3rq0p-Bx5yQDIFdsCbhEO3CyTYc')
 
 # 👑 Owner & Admins
 ADMINS = [int(i) for i in environ.get('ADMINS', '5665480584').split()]
